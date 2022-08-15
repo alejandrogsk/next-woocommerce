@@ -24,3 +24,62 @@ a {
     background: black;
   }
 }
+
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  max-width: 1400px;
+  margin: 0 auto;
+  gap:4rem;
+}
+
+@media (max-width: 900px) {
+  .products__grid {
+    grid-template-columns: repeat(3,1fr);
+    
+  }
+}
+
+@media (max-width: 700px) {
+  .products__grid {
+    grid-template-columns: repeat(2,1fr);
+    
+  }
+}
+
+
+@media (max-width: 500px) {
+  .products__grid {
+    grid-template-columns: repeat(1,1fr);
+    
+  }
+}
+
+.products__card > .products__card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products__card > img {
+  width: 100%;
+  height: auto;
+}
+.products__card > a {
+  display: inline-block;
+  padding: .5rem 1rem;
+  background-color: aqua;
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.products__card {
+ border: solid black 1px;
+ transition: all 300ms;
+}
+.products__card:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+ }
